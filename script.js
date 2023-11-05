@@ -110,3 +110,47 @@ console.log(sum1([5,7,18,19]))
 
 
 // 4.Return all the prime numbers in an array
+
+
+// 6.Return median of two sorted arrays of the same size.
+// Anonymous method;
+var median = function twoSort(arr1,arr2){
+    var arr = [...arr1,...arr2];
+    arr.sort((a,b)=>a-b);
+    let n = arr.length
+     if (n%2===0){
+        return ((arr[n/2]+arr[n/2-1])/2)
+     }else{
+        return arr[Math.floor(n/2)]
+     }
+}
+console.log(median([1,4,3,5,2,7],[8,7,9,10,12,13,14,15]));
+
+ //IIFE method;
+
+ (function twoSort(arr3,arr4){
+    var arr5 = [...arr3,...arr4];
+    arr5.sort((a,b)=>a-b);
+    let n = arr5.length
+     if (n%2===0){
+        console.log ((arr5[n/2]+arr5[n/2-1])/2)
+     }else{
+        console.log (arr5[Math.floor(n/2)])
+     }
+     
+}
+)([1,4,3,5,2,7,],[8,7,9,10])
+
+// Arrow Method;
+
+var median1 = (arr1,arr2)=>{
+    var arr = [...arr1,...arr2];
+    arr.sort((a,b)=>a-b);
+    let n = arr.length
+     if (n%2===0){
+        return ((arr[n/2]+arr[n/2-1])/2)
+     }else{
+        return arr[Math.floor(n/2)]
+     }
+}
+console.log(median1([1,4,3,5,2,7],[8,7,9,10,12,13,14,15,16,17,18]));
