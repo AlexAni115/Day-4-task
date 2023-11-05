@@ -165,14 +165,45 @@ console.log(dupli([1,1,1,2,3,3,4,4,4,]))
 
 //IIFE method;
 
-( function removeDuplicates(arr10){
-    rconsole.log( arr10.filter((ele1,index1)=>arr10.indexOf(ele1)===index1));
-    })
-    ([1,1,1,2,3,3,4,4,4,])
+// ( function removeDuplicates(arr10){
+//   return arr10.filter((ele1,index1)=>arr10.indexOf(ele1)===index1);
+//     }
+//     console.log
+//     )
+//     ([1,1,1,2,3,3,4,4,4,])
 
     // Arrow Method;
-    let dupli1 =(arr12)=>{
-        return arr12.filter((ele2,index2)=>arr12.indexOf(ele2)===index2);
-        }
-        console.log(dupli1([1,1,1,2,3,3,4,4,4,"john","john","Doe","Doe","Doe"]))
+    // let dupli1 =(arr12)=>{
+    //     return arr12.filter((ele2,index2)=>arr12.indexOf(ele2)===index2);
+    //     }
+    //     console.log(dupli1([1,1,1,2,3,3,4,4,4,"john","john","Doe","Doe","Doe"]))
+        
+ //8.Rotate an array by k times
+// Anonymous method;
+ var rotate=function(nu,k){
+    for (var l=0; l<k; l++){
+      nu.push(nu[l])
+      
+    }
+    for (var l=0;l<k;l++){
+        nu.shift()
+    }
+    return nu;
+}
+console.log(rotate([1,2,3,4,5],3));
+
+//IIFE method;
+// Anonymous method;
+(function(nu,k){
+    for (var l=0; l<k; l++){
+      nu.push(nu[l])
+      
+    }
+    for (var l=0;l<k;l++){
+        nu.shift()
+    }
+    console.log (nu);
+})
+([1,2,3,4,5],7);
+     
         
