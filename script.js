@@ -21,7 +21,7 @@ res = [];
             res.push(od[i])
         }
     }
-    console.log(res)
+    console.log(res);
 })([45,56,78,65,89,88])
 
 // Arrow Method;
@@ -50,7 +50,7 @@ for (i=0; i<upper.length; i++)
 }
 return ans;
 }
-console.log(c(["alex","prasad","karthik","nalan","dia"]))
+console.log(c(["alex","prasad","karthik","nalan","dia"]));
 
 //IIFE method;
 ans1 = [];
@@ -64,7 +64,7 @@ for (i=0; i<upper1.length; i++)
 }
 console.log (ans1);
 })
-(["ruban","lazar","sundararaj","alstan","elizha"])
+(["ruban","lazar","sundararaj","alstan","elizha"]);
 
 // Arrow Method;
 
@@ -79,7 +79,7 @@ for (i=0; i<upper2.length; i++)
 }
 return ans2;
 }
-console.log(d(["anitha","john","elsin","doe","mary"]))
+console.log(d(["anitha","john","elsin","doe","mary"]));
 
 //3.Sum of all numbers in an array:-
 // Anonymous method;
@@ -89,16 +89,16 @@ var sum= function(j){for (i=0; i<j.length;i++){
 }
 return f;
  }
-console.log(sum([1,2,3,4]))
+console.log(sum([1,2,3,4]));
 
-
-// (function(j){for (i=0; i<j.length;i++){
-//     var f=0
-//     f = f+j[i]
-// }
-// console.log(f);
-//  })
-// ([1,2,3,4])
+//IIFE method;
+(function(j){for (i=0; i<j.length;i++){
+    var f=0
+    f = f+j[i]
+}
+console.log(f);
+ })
+([1,2,3,4]);
 // Arrow method;
 var f1 = 0
 var sum1= (j1)=>{for (i=0; i<j1.length;i++){
@@ -161,22 +161,22 @@ console.log(median1([1,4,3,5,2,7],[8,7,9,10,12,13,14,15,16,17,18]));
 let dupli = function removeDuplicates(arr9){
 return arr9.filter((ele,index)=>arr9.indexOf(ele)===index);
 }
-console.log(dupli([1,1,1,2,3,3,4,4,4,]))
+console.log(dupli([1,1,1,2,3,3,4,4,4,]));
 
 //IIFE method;
 
-// ( function removeDuplicates(arr10){
-//   return arr10.filter((ele1,index1)=>arr10.indexOf(ele1)===index1);
-//     }
-//     console.log
-//     )
-//     ([1,1,1,2,3,3,4,4,4,])
+( function removeDuplicates(arr10){
+   console.log (arr10.filter((ele1,index1)=>arr10.indexOf(ele1)===index1));
+    }
+    
+    )
+    ([1,1,1,2,3,3,4,4,4,"alex","alex",]);
 
     // Arrow Method;
-    // let dupli1 =(arr12)=>{
-    //     return arr12.filter((ele2,index2)=>arr12.indexOf(ele2)===index2);
-    //     }
-    //     console.log(dupli1([1,1,1,2,3,3,4,4,4,"john","john","Doe","Doe","Doe"]))
+    let dupli1 =(arr12)=>{
+        return arr12.filter((ele2,index2)=>arr12.indexOf(ele2)===index2);
+        }
+        console.log(dupli1([1,1,1,2,3,3,4,4,4,"john","john","Doe","Doe","Doe"]))
         
  //8.Rotate an array by k times
 // Anonymous method;
