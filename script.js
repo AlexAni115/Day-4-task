@@ -106,10 +106,25 @@ var sum1= (j1)=>{for (i=0; i<j1.length;i++){
 }
 return f1;
  }
-console.log(sum1([5,7,18,19]))
+console.log(sum1([5,7,18,19]));
 
 
 // 4.Return all the prime numbers in an array
+
+// 5.Return all the palindromes in an array
+// Anonymous method;
+ function palindrome (arr20){
+    var palin =[];
+    for ( var i=0;i<arr20.length;i++){
+     var data = arr20[i].split("").reverse().join("");
+      if (data===arr20[i]){
+        palin.push(arr20[i])
+      }
+     
+    }
+    return palin;
+}
+console.log(palindrome(["mom","dad",121,"data","John"]));
 
 
 // 6.Return median of two sorted arrays of the same size.
