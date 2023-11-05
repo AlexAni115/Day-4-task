@@ -143,14 +143,36 @@ console.log(median([1,4,3,5,2,7],[8,7,9,10,12,13,14,15]));
 
 // Arrow Method;
 
-var median1 = (arr1,arr2)=>{
-    var arr = [...arr1,...arr2];
-    arr.sort((a,b)=>a-b);
-    let n = arr.length
+var median1 = (arr6,arr7)=>{
+    var arr8 = [...arr6,...arr7];
+    arr8.sort((a,b)=>a-b);
+    let n = arr8.length
      if (n%2===0){
-        return ((arr[n/2]+arr[n/2-1])/2)
+        return ((arr8[n/2]+arr8[n/2-1])/2)
      }else{
-        return arr[Math.floor(n/2)]
+        return arr8[Math.floor(n/2)]
      }
 }
 console.log(median1([1,4,3,5,2,7],[8,7,9,10,12,13,14,15,16,17,18]));
+
+//7.Remove duplicates from an array
+
+// Anonymous method;
+let dupli = function removeDuplicates(arr9){
+return arr9.filter((ele,index)=>arr9.indexOf(ele)===index);
+}
+console.log(dupli([1,1,1,2,3,3,4,4,4,]))
+
+//IIFE method;
+
+( function removeDuplicates(arr10){
+    rconsole.log( arr10.filter((ele1,index1)=>arr10.indexOf(ele1)===index1));
+    })
+    ([1,1,1,2,3,3,4,4,4,])
+
+    // Arrow Method;
+    let dupli1 =(arr12)=>{
+        return arr12.filter((ele2,index2)=>arr12.indexOf(ele2)===index2);
+        }
+        console.log(dupli1([1,1,1,2,3,3,4,4,4,"john","john","Doe","Doe","Doe"]))
+        
