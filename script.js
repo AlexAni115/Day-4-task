@@ -113,19 +113,44 @@ console.log(sum1([5,7,18,19]));
 
 // 5.Return all the palindromes in an array
 // Anonymous method;
- function palindrome (arr20){
-    var palin =[];
-    for ( var i=0;i<arr20.length;i++){
-     var data = arr20[i].split("").reverse().join("");
-      if (data===arr20[i]){
-        palin.push(arr20[i])
-      }
-     
+var pal = function palindrome (arr12){
+    var palin  = [];
+    for (var i=0;i<arr12.length;i++){
+     var data = arr12[i].split("").reverse().join("")
+    if (data===arr12[i]){
+        palin.push(arr12[i])
+    }
     }
     return palin;
-}
-console.log(palindrome(["mom","dad",121,"data","John"]));
+} 
+console.log(pal(["mom","data","dad","121",]));
 
+//IIFE method;
+(function palindrome1 (arr13){
+    var palin1  = [];
+    for (var i=0;i<arr13.length;i++){
+     var data1 = arr13[i].split("").reverse().join("")
+    if (data1===arr13[i]){
+        palin1.push(arr13[i])
+    }
+    }
+    console.log(palin1);
+} )
+(["civic","data","radar","121","level"]);
+
+// Arrow Method;
+
+var pal1  =(arr14) =>{
+    var palin2  = [];
+    for (var i=0;i<arr14.length;i++){
+     var data2 = arr14[i].split("").reverse().join("")
+    if (data2===arr14[i]){
+        palin2.push(arr14[i])
+    }
+    }
+    return palin2;
+} 
+console.log(pal1(["rotor","data","kayak","121","madam"]));
 
 // 6.Return median of two sorted arrays of the same size.
 // Anonymous method;
